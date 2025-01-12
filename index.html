@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Please accept cookies 🥺🙏</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+        #cookie-banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            display: none;
+        }
+        #cookie-banner button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        #video-container {
+            display: none;
+            margin-top: 20px;
+        }
+        video {
+            width: 80%;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="cookie-banner">
+    We use cookies to enhance your experience! 
+    <button id="accept-cookies">Accept</button>
+    <button id="decline-cookies">Decline</button>
+</div>
+
+<div id="video-container">
+    <video id="video" controls autoplay>
+        <source src="lol.mp4" type="video/mp4">
+        Your browser broken. please use another browser
+    </video>
+</div>
+
+<script>
+    window.onload = function() {
+        // Show the prank banner
+        document.getElementById('cookie-banner').style.display = 'block';
+    };
+
+    document.getElementById('accept-cookies').onclick = function() {
+        document.getElementById('cookie-banner').style.display = 'none';
+        playVideo();
+    };
+
+    document.getElementById('decline-cookies').onclick = function() {
+        document.getElementById('cookie-banner').style.display = 'none';
+        playVideo();
+    };
+
+    function playVideo() {
+        document.getElementById('video-container').style.display = 'block';
+        const video = document.getElementById('video');
+        video.play();
+    }
+</script>
+
+</body>
+</html>
